@@ -46,6 +46,8 @@
             // titleCD
             // 
             this.titleCD.AutoSize = true;
+            this.titleCD.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.titleCD.ForeColor = System.Drawing.SystemColors.Desktop;
             this.titleCD.Location = new System.Drawing.Point(76, 128);
             this.titleCD.Name = "titleCD";
             this.titleCD.Size = new System.Drawing.Size(30, 13);
@@ -55,6 +57,8 @@
             // btnRelease
             // 
             this.btnRelease.AutoSize = true;
+            this.btnRelease.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRelease.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnRelease.Location = new System.Drawing.Point(57, 163);
             this.btnRelease.Name = "btnRelease";
             this.btnRelease.Size = new System.Drawing.Size(49, 13);
@@ -64,6 +68,8 @@
             // btnMount
             // 
             this.btnMount.AutoSize = true;
+            this.btnMount.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMount.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnMount.Location = new System.Drawing.Point(16, 212);
             this.btnMount.Name = "btnMount";
             this.btnMount.Size = new System.Drawing.Size(90, 13);
@@ -73,6 +79,8 @@
             // btnURL
             // 
             this.btnURL.AutoSize = true;
+            this.btnURL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnURL.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnURL.Location = new System.Drawing.Point(46, 318);
             this.btnURL.Name = "btnURL";
             this.btnURL.Size = new System.Drawing.Size(60, 13);
@@ -81,6 +89,8 @@
             // 
             // txtitle
             // 
+            this.txtitle.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtitle.Location = new System.Drawing.Point(142, 125);
             this.txtitle.Name = "txtitle";
             this.txtitle.Size = new System.Drawing.Size(169, 20);
@@ -88,6 +98,8 @@
             // 
             // txrelease
             // 
+            this.txrelease.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txrelease.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txrelease.Location = new System.Drawing.Point(142, 163);
             this.txrelease.Name = "txrelease";
             this.txrelease.Size = new System.Drawing.Size(169, 20);
@@ -95,6 +107,8 @@
             // 
             // txmount
             // 
+            this.txmount.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txmount.Location = new System.Drawing.Point(142, 205);
             this.txmount.Name = "txmount";
             this.txmount.Size = new System.Drawing.Size(169, 20);
@@ -102,6 +116,8 @@
             // 
             // txurl
             // 
+            this.txurl.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txurl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txurl.Location = new System.Drawing.Point(142, 311);
             this.txurl.Name = "txurl";
             this.txurl.Size = new System.Drawing.Size(169, 20);
@@ -118,27 +134,35 @@
             // 
             // btnaccept
             // 
+            this.btnaccept.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnaccept.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.btnaccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaccept.Location = new System.Drawing.Point(106, 458);
             this.btnaccept.Name = "btnaccept";
             this.btnaccept.Size = new System.Drawing.Size(75, 23);
             this.btnaccept.TabIndex = 11;
             this.btnaccept.Text = "Next";
-            this.btnaccept.UseVisualStyleBackColor = true;
+            this.btnaccept.UseVisualStyleBackColor = false;
             this.btnaccept.Click += new System.EventHandler(this.btnaccept_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Salmon;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Location = new System.Drawing.Point(251, 458);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblStyle
             // 
             this.lblStyle.AutoSize = true;
+            this.lblStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblStyle.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lblStyle.Location = new System.Drawing.Point(76, 269);
             this.lblStyle.Name = "lblStyle";
             this.lblStyle.Size = new System.Drawing.Size(30, 13);
@@ -147,6 +171,10 @@
             // 
             // comboStyle
             // 
+            this.comboStyle.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.comboStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboStyle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboStyle.ForeColor = System.Drawing.Color.Black;
             this.comboStyle.FormattingEnabled = true;
             this.comboStyle.Location = new System.Drawing.Point(142, 261);
             this.comboStyle.Name = "comboStyle";
@@ -157,6 +185,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(415, 511);
             this.Controls.Add(this.comboStyle);
             this.Controls.Add(this.btnCancel);
@@ -171,6 +201,7 @@
             this.Controls.Add(this.btnMount);
             this.Controls.Add(this.btnRelease);
             this.Controls.Add(this.titleCD);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "frmAddCd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CD";

@@ -37,36 +37,51 @@
             // 
             // dgvDisks
             // 
+            this.dgvDisks.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dgvDisks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvDisks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDisks.Location = new System.Drawing.Point(49, 78);
+            this.dgvDisks.GridColor = System.Drawing.Color.SlateBlue;
+            this.dgvDisks.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.dgvDisks.Location = new System.Drawing.Point(12, 146);
+            this.dgvDisks.MultiSelect = false;
             this.dgvDisks.Name = "dgvDisks";
-            this.dgvDisks.Size = new System.Drawing.Size(401, 293);
+            this.dgvDisks.ReadOnly = true;
+            this.dgvDisks.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvDisks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDisks.Size = new System.Drawing.Size(653, 293);
             this.dgvDisks.TabIndex = 0;
             this.dgvDisks.SelectionChanged += new System.EventHandler(this.dgvDisks_SelectionChanged);
             // 
             // pvDiks
             // 
-            this.pvDiks.Location = new System.Drawing.Point(599, 78);
+            this.pvDiks.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pvDiks.Location = new System.Drawing.Point(768, 146);
             this.pvDiks.Name = "pvDiks";
-            this.pvDiks.Size = new System.Drawing.Size(374, 305);
+            this.pvDiks.Size = new System.Drawing.Size(374, 293);
             this.pvDiks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pvDiks.TabIndex = 1;
             this.pvDiks.TabStop = false;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(181, 394);
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Location = new System.Drawing.Point(0, 530);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(103, 35);
+            this.btnAdd.Size = new System.Drawing.Size(1186, 35);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "AddCd";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1186, 565);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pvDiks);

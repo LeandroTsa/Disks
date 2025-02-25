@@ -19,7 +19,7 @@ namespace businessDisks
     {
         public List<domDisks> listar()
         {
-             
+
             List<domDisks> list = new List<domDisks>();
             SqlConnection conection = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -41,33 +41,32 @@ namespace businessDisks
                     Aux.Title = (string)reader["Titulo"];
                     Aux.release = (DateTime)reader["FechaLanzamiento"];
                     Aux.mount = reader.GetInt32(2);
-                    Aux.URLdisks = (string)reader["UrlImagenTapa"];
+                        if (!(reader["UrlImagenTapa"] is DBNull))
+                        {
+                            Aux.URLdisks = (string)reader["UrlImagenTapa"];
+                        }
                     Aux.Descripcion = new diskEdicion();
                     Aux.Descripcion.description = (string)reader["Descripcion"];
 
                     list.Add(Aux);
-
                 }
                 conection.Close();
                 return list;
-
-
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
-
         }
-
         public void add(domDisks addnew)
         {
             dataAcces data = new dataAcces();
             try
             {
-
-                data.setearQuery("INSERT INTO DISCOS(Titulo, CantidadCanciones, UrlImagenTapa) values('" + addnew.Title +"',"+ addnew.mount + ", '"+addnew.URLdisks+"')");
+                data.setearQuery("INSERT INTO DISCOS(Titulo, CantidadCanciones, UrlImagenTapa) values(@Title , @Mount, @URLdisks)");
+                data.setearparametros("@URLdisks", addnew.URLdisks);
+                data.setearparametros("@Title", addnew.Title);
+                data.setearparametros("@Mount", addnew.mount);
                 data.actioneject();
 
             }
@@ -81,6 +80,5 @@ namespace businessDisks
                 data.closeconection();   
             }
         }
-
     }
 }

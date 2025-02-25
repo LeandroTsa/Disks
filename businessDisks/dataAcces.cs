@@ -64,6 +64,9 @@ namespace businessDisks
                 reader.Close();
             conection.Close();
         }
-
+        public void setearparametros(string name, object value)
+        {
+            command.Parameters.AddWithValue(name, value);
+        }
     }
 }

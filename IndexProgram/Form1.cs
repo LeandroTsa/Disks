@@ -23,15 +23,8 @@ namespace IndexProgram
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            bnsDisk bsnDiskEdicion = new bnsDisk();
-            principaldominio = bsnDiskEdicion.listar();
-            dgvDisks.DataSource = principaldominio;
-            pvDiks.Load(principaldominio[0].URLdisks);
-            dgvDisks.Columns["URLdisks"].Visible = false;
-
+            cargar();
         }
-
-
         private void dgvDisks_SelectionChanged(object sender, EventArgs e)
         {
             try
@@ -46,11 +39,28 @@ namespace IndexProgram
             }
 
         }
+        private void cargar()
+        {
+            bnsDisk bsnDiskEdicion = new bnsDisk();
+
+            try
+            {
+                principaldominio = bsnDiskEdicion.listar();
+                dgvDisks.DataSource = principaldominio;
+                pvDiks.Load(principaldominio[0].URLdisks);
+                dgvDisks.Columns["URLdisks"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmAddCd add = new frmAddCd();
             add.ShowDialog();
+            cargar();
         }
 
     }
